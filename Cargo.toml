@@ -1,14 +1,18 @@
 [package]
-name = "mlx90640-app"
+name = "mlx90640-gtk"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-ftdi-embedded-hal = { version = "0.20.0", features = ["libftd2xx", "ftdi", "libftd2xx-static"] }
+anyhow = "1.0.79"
+clap = { version = "4.4.13", features = ["derive"] }
+event-listener = "4.0.3"
+ftdi-embedded-hal = { version = "0.20.0", features = ["libftd2xx", "libftd2xx-static"] }
 futures = "0.3.30"
 gtk4 = { version = "0.7.3", features = ["v4_8"] }
 libftd2xx = { version = "0.32.3", features = ["static"] }
 linux-embedded-hal = "0.3.2"
-mlx9064x = { version = "0.3.0", path = "../mlx9064x-rs/mlx9064x" }
+#mlx9064x = { version = "0.3.0", path = "../mlx9064x-rs/mlx9064x" }
+mlx9064x =  "0.2"
